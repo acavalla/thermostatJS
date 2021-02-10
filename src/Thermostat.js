@@ -6,4 +6,8 @@ class Thermostat {
   temp() {
     return this.tempy;
   }
+
+  up() {
+    return this.tempy += 1;
+  }
 }
