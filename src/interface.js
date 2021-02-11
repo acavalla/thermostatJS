@@ -33,6 +33,7 @@ $(document).ready(function() {
 
   function updateTemperature() {
     $('#temperature').text(thermostat.tempy);
+    $('#temperature').attr('class', thermostat.energyUsage());
   };
 
 })
