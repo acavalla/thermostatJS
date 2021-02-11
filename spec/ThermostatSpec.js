@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Thermostat', function() {
-  
+
   var thermostat;
 
   beforeEach(function() {
@@ -38,13 +38,21 @@ describe('Thermostat', function() {
   });
 
   describe('power saving mode',function(){
-    it('cannot go above 25', function(){
+    it('default is on', function(){
+      expect(thermostat.powerSavey()).toBe(true)
+    });
+
+    it('cannot go above 25 when on', function(){
       thermostat = new Thermostat(25);
       expect( function() {
         thermostat.up();
       }).toThrow(new Error("Too hot"));
     });
-  });
+    it('can be switched off', function(){
+      thermostat.switchSaveOff()
+      expect(thermostat.powerSavey()).toBe(false)
+    });
+  })
 
   describe('reset',function(){
     it('resets to 20', function(){

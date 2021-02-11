@@ -9,6 +9,10 @@ class Thermostat {
     this.MAXIMUM_TEMP = 25
   }
 
+  powerSavey() {
+    return this.powerSave;
+  }
+
   temp() {
     return this.tempy;
   }
@@ -26,8 +30,13 @@ class Thermostat {
   }
 
   switchSaveOff() {
-    this.powerSave = false
-    this.MAXIMUM_TEMP = 32
+    this.powerSave = false;
+    this.MAXIMUM_TEMP = 32;
+  }
+
+  switchSaveOn() {
+    this.powerSave = true;
+    this.MAXIMUM_TEMP = 25;
   }
 
   energyUsage() {
