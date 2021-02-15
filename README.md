@@ -1,5 +1,7 @@
 # thermostatJS
 
+A repo for week 6 of Maker's Academy, our intro into javascript. I built a thermostat with the below functionality and then added some css styling.
+
 Specification
  - Thermostat starts at 20 degrees
  - You can increase the temperature with an up function
